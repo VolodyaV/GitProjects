@@ -1,0 +1,66 @@
+object CalculatorForSC: TCalculatorForSC
+  Left = 697
+  Height = 1178
+  Top = 234
+  Width = 1066
+  BorderStyle = bsSingle
+  Caption = 'CalculatorForSC'
+  ClientHeight = 1178
+  ClientWidth = 1066
+  Color = clTeal
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Image1: TImage
+    Left = 120
+    Height = 912
+    Top = 176
+    Width = 832
+  end
+  object Calculate: TButton
+    Left = 704
+    Height = 45
+    Top = 56
+    Width = 86
+    Caption = '='
+    Color = clMoneyGreen
+    OnClick = CalculateClick
+    TabOrder = 0
+  end
+  object Number1: TEdit
+    Left = 16
+    Height = 45
+    Top = 56
+    Width = 264
+    Color = clTeal
+    MaxLength = 10
+    OnKeyPress = Number1KeyPress
+    TabOrder = 1
+  end
+  object Number2: TEdit
+    Left = 424
+    Height = 45
+    Top = 56
+    Width = 264
+    Color = clTeal
+    MaxLength = 10
+    OnKeyPress = Number2KeyPress
+    TabOrder = 2
+  end
+  object ComboBox: TComboBox
+    Left = 296
+    Height = 45
+    Top = 56
+    Width = 116
+    Color = clTeal
+    ItemHeight = 37
+    Items.Strings = (
+      '+'
+      '-'
+      '*'
+      '/'
+    )
+    OnChange = ComboBoxChange
+    Style = csDropDownList
+    TabOrder = 3
+  end
+end
